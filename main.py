@@ -6,6 +6,11 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
 
 TOKEN = os.getenv("TOKEN")
+
+print("TOKEN:", TOKEN)
+if TOKEN is None:
+    raise Exception("❌ Railway не бачить змінну TOKEN")
+    
 SMART_LINK = "https://securesmdtlink.com/s?a=267695&sm=49040&co=328937&mt=29"
 VIDEO_NOTE_IDS = [
     "DQACAgIAAxkBAAIC_mgk9c-RV4i4OGfdi-0CnKlnF0-BAAILbgACMOvwS7l2ZKjRmAstNgQ",
