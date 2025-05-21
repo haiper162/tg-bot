@@ -1,12 +1,10 @@
 import os
-from dotenv import load_dotenv
 import asyncio
 import random
 import telegram.error
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
 
-load_dotenv()
 TOKEN = os.getenv("TOKEN")
 SMART_LINK = "https://securesmdtlink.com/s?a=267695&sm=49040&co=328937&mt=29"
 VIDEO_NOTE_IDS = [
